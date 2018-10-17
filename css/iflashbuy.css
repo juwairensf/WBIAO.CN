@@ -189,6 +189,7 @@ header .banner ul li{
 	width: 100%;
 	overflow: hidden;
 	position: absolute;
+	opacity: 0;
 	transition: opacity  .8s
 }
 header .banner .wrap ul li img{
@@ -258,7 +259,9 @@ header .banner ul li img{
 	border: 2px solid #858998;
 }
 #btnlist span.active{
+	border-color: #ccaa7a;
 	box-shadow: 0 0 5px #ccaa7a;
+	background: #FFF;
 }
 
 

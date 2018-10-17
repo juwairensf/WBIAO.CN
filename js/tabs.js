@@ -1,13 +1,12 @@
-function Banner(){
-	var aItem = document.querySelectorAll(".banner li");
-	var oLeft = document.getElementById("left");
-	var oRight = document.getElementById("right");
-	var oSpan = document.querySelectorAll("#btnlist span");
+function Tabs(){
+	var aItem = document.querySelectorAll(".con3-cm figure");
+	var oLeft = document.getElementById("left1");
+	var oRight = document.getElementById("right1");
+	var oSpan = document.querySelectorAll(".con3-list span");
 	
 	var nowIndex = 0; //当前显示的下标；
 	
-	//1、手动循环；
-	//0~3；
+	
 	
 	
 	//右侧按钮点击 是 下标自增；
@@ -43,10 +42,8 @@ function Banner(){
 			aItem[i].className = "";
 			oSpan[i].className = "";
 		}
-		aItem[nowIndex].className = "active";
-		oSpan[nowIndex].className = "active";
+		aItem[nowIndex].className = "active-x";
+		oSpan[nowIndex].className = "active-x";
 	}
-	//自动播放；
-	timer=setInterval(oRight.onclick, 5000);
-}	
-Banner();
+}
+Tabs();

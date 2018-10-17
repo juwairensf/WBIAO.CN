@@ -70,17 +70,27 @@ section form .log-b-middle{
 }
 section form .log-b-middle p{
 	width: 298px;
-	height: 42px;
+	height: 52px;
 }
 section form .log-b-middle p:nth-child(1){
 	margin-top: 13px;
+}
+
+section form .log-b-middle p:nth-child(1) span.active{
+	display: block;
+	width: 288px;
+	margin-left: 10px;
+	height: 30px;
+	line-height: 30px;
+	color: #cc5252;
+	font-size: 12px;
+	display: none;
 }
 section form .log-b-middle p:nth-child(1) input{
 	width: 288px;
 	height: 42px;
 	border:1px solid #ddd;
 	padding-left: 10px;
-	color: #ccc;
 }
 section form .log-b-middle p:nth-child(2){
 	margin-top: 20px;
@@ -90,19 +100,24 @@ section form .log-b-middle p:nth-child(2) input:nth-child(1){
 	height: 42px;
 	border:1px solid #ddd;
 	padding-left: 10px;
-	color: #cccccc;
 }
-section form .log-b-middle p:nth-child(2) input:nth-child(2){
+section form .log-b-middle p i{
+	display: inline-block;
+	outline: none;
+	border: none;
 	width: 93px;
 	height: 44px;
+	line-height: 44px;
 	background: #b1b1b1;
 	text-align: center;
 	color: #fff;
+	cursor: pointer;
 }
 section form .log-b-middle p:nth-child(3){
 	margin-top: 12px;
 }
 section form .log-b-middle p:nth-child(3) button{
+	outline: none;
 	border: none;
 	width: 300px;
 	height: 44px;
@@ -122,7 +137,7 @@ section form .log-b-middle p:nth-child(4) a{
 	line-height: 12px;
 }
 section form .log-b-bottom{
-	margin-top: 126px;
+	margin-top: 106px;
 	margin-left: 187px;
 }
 section form .log-b-bottom span{

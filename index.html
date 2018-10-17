@@ -13,7 +13,7 @@
         <div class="header-top">
             <a href="#">
                 <img src="img/index.img/036c502c3fe5479eb50230454ee6b1b1.jpg" alt="">
-                <span>x</span>
+                <span id="close">x</span>
             </a>
         </div>
         <div class="header-m">
@@ -85,7 +85,7 @@
 			</div>
 			<!--图片-->
         	<ul>
-        		<li><img src="https://image8.wbiao.co/mall/bf560cb027ce415c92615fec2c346474.jpg" alt="" /></li>
+        		<li class="active"><img src="https://image8.wbiao.co/mall/bf560cb027ce415c92615fec2c346474.jpg" alt="" /></li>
         		<li><img src="https://image8.wbiao.co/mall/0a04a7d65f1c43b4b4badb2d733b0e3e.jpg" alt="" /></li>
         		<li><img src="https://image8.wbiao.co/mall/a21696e1dc0046fcb8ee33799988c96e.jpg" alt="" /></li>
         		<li><img src="https://image8.wbiao.co/mall/a7a7d986d2b94b159271412b473ea246.jpg" alt="" /></li>
@@ -137,7 +137,18 @@
     			<div class="con2-top clearfix">
     				<div class="con2-top-left">
     					<span>限时购</span>
-    					<em>本期已结束</em>
+    					<!--倒计时-->
+    					<span class="left_time" id="leftTime" end-time="1539738000">
+    						距离本期结束 &nbsp;
+    						<i id="day">00</i>
+    						<em>天</em>
+    						<i id="hour">00</i>
+    						<em>时</em>
+    						<i id="minute">00</i>
+    						<em>分</em>
+    						<i id="second">00</i>
+    						<em>秒</em>
+    					</span>
     				</div>
     				<div class="con2-top-right">
     					<strong>查看更多></strong>
@@ -145,10 +156,33 @@
     			</div>
     			<div class="con2-bottom clearfix">
     				<div class="con2-bottom-left">
+    					<span>大牌闪购，2.9折起</span>
+    					<span>限时购，售完即止</span>
     					<a href="#"><img src="https://image8.wbiao.co/mall/1b756c6866e241359d04cf8e1f0dfb63.jpg?x-oss-process=image/resize,w_392" alt=""/></a>
+    					
     				</div>
-    				<div class="con2-bottom-center">
-    					<a href="#"><img src="https://image8.wbiao.co/shop/201710_31_DC001-SN201-10BN_34939.jpg?x-oss-process=image/resize,m_pad,h_166" alt=""/></a>
+    				<div class="con2-bottom-center clearfix">
+    					<figure>
+    						<a href="#"><img src="https://image8.wbiao.co/shop/201708_18_SNKE49J1_87773.jpg?x-oss-process=image/resize,m_pad,h_166" alt=""/></a>
+    						<span>精工</span>
+    						<em>6折</em>
+    						<em>&yen;900</em>
+    						<i>&yen;1,550</i>
+    					</figure>
+    					<figure>
+    						<a href="#"><img src="https://image8.wbiao.co/shop/201708_18_SNKE49J1_87773.jpg?x-oss-process=image/resize,m_pad,h_166" alt=""/></a>
+    						<span>精工</span>
+    						<em>6折</em>
+    						<em>&yen;900</em>
+    						<i>&yen;1,550</i>
+    					</figure>
+    					<figure>
+    						<a href="#"><img src="https://image8.wbiao.co/shop/201708_18_SNKE49J1_87773.jpg?x-oss-process=image/resize,m_pad,h_166" alt=""/></a>
+    						<span>精工</span>
+    						<em>6折</em>
+    						<em>&yen;900</em>
+    						<i>&yen;1,550</i>
+    					</figure>
     				</div>
     				<div class="con2-bottom-right">
     					<a href="#"><img src="https://image8.wbiao.co/mall/37a4ca09c4a64a6494f832bcc810f1e5.jpg?x-oss-process=image/resize,w_142" alt=""/></a>
@@ -156,6 +190,111 @@
     			</div>
     		</div>
     	</div>
+    	
+    	<!--内容3-->
+    	<div class="con3">
+    		<div class="con3-cm clearfix">
+    			<!--按钮-->
+	        	<div id="btn1">
+					<button id="left1"></button>
+					<button id="right1"></button>
+				</div>
+    			<div class="con3-list">
+    				<i>品牌馆</i>
+    				<span class="active-x">奢华</span>
+    				<span>轻奢</span>
+    				<span>顶级</span>
+    				<span>高级</span>
+    				<span>时尚</span>
+    			</div>
+				<ul>
+					<figure class="active-x">
+						<li href="#"><img src="https://image8.wbiao.co/mall/97ef8a38119640b0891bf744bc3fe414.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/4356ed2b2a6e44f5bc03e6d1b57b1ab8.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/8b1a8858eee5436d82394fe9808c665f.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/e825d2caa3ea4f8380588ab370651c0c.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+					</figure>
+					<figure>
+						<li href="#"><img src="https://image8.wbiao.co/mall/b67e11cd19744e1b8d17c6bcb07d8217.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/3597529534a24238803cb21b8d823227.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/ccd5ac3cacbf4fb7b32a7e39f0ea524d.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/4bc158133bdb49b095bb62e24504b81f.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+					</figure>
+					<figure>
+						<li href="#"><img src="https://image8.wbiao.co/mall/97ef8a38119640b0891bf744bc3fe414.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/4356ed2b2a6e44f5bc03e6d1b57b1ab8.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/8b1a8858eee5436d82394fe9808c665f.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/e825d2caa3ea4f8380588ab370651c0c.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+					</figure>
+					<figure>
+						<li href="#"><img src="https://image8.wbiao.co/mall/b67e11cd19744e1b8d17c6bcb07d8217.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/3597529534a24238803cb21b8d823227.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/ccd5ac3cacbf4fb7b32a7e39f0ea524d.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/4bc158133bdb49b095bb62e24504b81f.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+					</figure>
+					<figure>
+						<li href="#"><img src="https://image8.wbiao.co/mall/4a0b0ef17f014aad9cec6f893d7f388e.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/f1057f8fc5ac4c8fa7a5365414ad52bf.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/d2149a9f45a34a1abcc89915bd4a272f.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+		    			<li href="#"><img src="https://image8.wbiao.co/mall/f73b07b3f32a477ab856e665e56dc7ec.jpg?x-oss-process=image/resize,w_594,h_260" alt=""/></li>
+					</figure>				</ul>
+    		</div>
+    	</div>
+    	<!--内容4-->
+    	<div class="con4">
+    		<div class="con4-cm clearfix">
+    			<h2>晒单分享</h2>
+    			<figure>
+    				<a href="#"><img src="https://image8.wbiao.co/mall/3f93e895fe2f45af90606bd8a3e3213d.jpg?x-oss-process=image/resize,w_291" alt=""/></a>
+    				<figcaption>法国赫柏林恒星手表和表带都很漂亮，关键可以一个顶仨</figcaption>
+    			</figure>
+    			<figure>
+    				<a href="#"><img src="https://image8.wbiao.co/mall/3f93e895fe2f45af90606bd8a3e3213d.jpg?x-oss-process=image/resize,w_291" alt=""/></a>
+    				<figcaption>法国赫柏林恒星手表和表带都很漂亮，关键可以一个顶仨</figcaption>
+    			</figure>
+    			<figure>
+    				<a href="#"><img src="https://image8.wbiao.co/mall/3f93e895fe2f45af90606bd8a3e3213d.jpg?x-oss-process=image/resize,w_291" alt=""/></a>
+    				<figcaption>法国赫柏林恒星手表和表带都很漂亮，关键可以一个顶仨</figcaption>
+    			</figure>
+    			<figure>
+    				<a href="#"><img src="https://image8.wbiao.co/mall/3f93e895fe2f45af90606bd8a3e3213d.jpg?x-oss-process=image/resize,w_291" alt=""/></a>
+    				<figcaption>法国赫柏林恒星手表和表带都很漂亮，关键可以一个顶仨</figcaption>
+    			</figure>
+    			
+    		</div>
+    	</div>
+    	<!--内容5-->
+    	<div class="con5">
+    		<div class="con5-cm clearfix">
+    			<h2>猜你喜欢</h2>
+    			<figure>
+    				<a href="#"><img src="https://image6.wbiao.co/shop/cb99f105d4054e2a97332639afe73e3c.jpg?x-oss-process=image/resize,m_pad,h_223" alt=""/></a>
+    				<span>瑞士浪琴</span>
+					<span>名匠系列机械男表</span>
+					<span>&yen;20,500</span>
+    			</figure>
+    			<figure>
+    				<a href="#"><img src="https://image6.wbiao.co/shop/201506_19_M8600_4_26_1_38641.jpg?x-oss-process=image/resize,m_pad,h_223" alt=""/></a>
+    				<span>瑞士浪琴</span>
+					<span>名匠系列机械男表</span>
+					<span>&yen;20,500</span>
+    			</figure>
+    			<figure>
+    				<a href="#"><img src="https://image6.wbiao.co/shop/201708_31_P4104_SG_1021_1106_82727.jpg?x-oss-process=image/resize,m_pad,h_223" alt=""/></a>
+    				<span>瑞士浪琴</span>
+					<span>名匠系列机械男表</span>
+					<span>&yen;20,500</span>
+    			</figure>
+    			<figure>
+    				<a href="#"><img src="https://image6.wbiao.co/shop/201707_31_116234-G-63600__10331.jpg?x-oss-process=image/resize,m_pad,h_223" alt=""/></a>
+    				<span>瑞士浪琴</span>
+					<span>名匠系列机械男表</span>
+					<span>&yen;20,500</span>
+    			</figure>
+    			
+    		</div>
+    	</div>
+    	
     	<!--内容6-->
     	<div class="con6">
     		<div class="con6-cm">
@@ -258,10 +397,14 @@
     			<a href="#"><img src="https://image8.wbiao.co/mall/ea49d2babdfb40e8a6299853dcdaad95.png" alt=""/></a>
     			<a href="#"><img src="https://image8.wbiao.co/mall/974c6d4831df40e1a8f373b813bf0ff6.png" alt=""/></a>
     			<a href="#"><img src="https://image8.wbiao.co/mall/b5aed124eb1942a9aa937854acc318ee.png" alt=""/></a>
-    			<a href="#"><img src="https://image8.wbiao.co/mall/18e503f988ff430b812ec5d44ae18565.png" alt=""/></a>
+    			<a href="#er"><img src="https://image8.wbiao.co/mall/18e503f988ff430b812ec5d44ae18565.png" alt=""/></a>
     		</div>
     	</div>
     </footer>
-    <script src="js/banner1.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+    <script type="text/javascript" src="js/top.js" ></script>
+    <script type="text/javascript" src="js/banner1.js"></script>
+    <script type="text/javascript" src="js/countdown.js"></script>
+    <script type="text/javascript" src="js/tabs.js" ></script>
 </body>
 </html>
