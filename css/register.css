@@ -39,6 +39,7 @@ section .reg-b{
 section form{
     width: 380px;
     height: 460px;
+    background: #fff;
 }
 section form h2{
 	height: 28px;
@@ -56,13 +57,24 @@ section form .reg-b-middle p{
 	width: 338px;
 	height: 42px;
 	margin-top: 8px;
+	font-size: 12px;
+}
+section form .reg-b-middle p span.active{
+	display: block;
+	width: 288px;
+	margin-left: 10px;
+	height: 20px;
+	line-height: 20px;
+	color: #cc5252;
+	font-size: 12px;
+	display: none;
 }
 section form .reg-b-middle p:nth-child(1){
 	margin-top: 13px;
 }
 section form .reg-b-middle p input{
 	width: 328px;
-	height: 42px;
+	height: 30px;
 	border:1px solid #ddd;
 	padding-left: 10px;
 	color: #ccc;
@@ -71,24 +83,29 @@ section form .reg-b-middle p:nth-child(2){
 }
 section form .reg-b-middle p:nth-child(2) input:nth-child(1){
 	width: 214px;
-	height: 42px;
+	height: 30px;
 	border:1px solid #ddd;
 	padding-left: 10px;
 	color: #cccccc;
 }
-section form .reg-b-middle p:nth-child(2) input:nth-child(2){
-	width: 91px;
-	height: 42px;
-	border:1px solid #ddd;
+section form .reg-b-middle p:nth-child(2) i{
+	display: inline-block;
+	outline: none;
+	border: none;
+	width: 100px;
+	height: 32px;
+	line-height: 32px;
+	background: #b1b1b1;
 	text-align: center;
-	padding-left: 0;
-	color: #333;
-	margin-left: 4px;
+	color: #fff;
+	cursor: pointer;
+	margin-left: 8px;
 }
 section form .reg-b-middle p:nth-child(6){
 	
 }
 section form .reg-b-middle p:nth-child(6) button{
+	outline: none;
 	border: none;
 	width: 338px;
 	height: 44px;

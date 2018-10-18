@@ -76,7 +76,7 @@ section form .log-b-middle p:nth-child(1){
 	margin-top: 13px;
 }
 
-section form .log-b-middle p:nth-child(1) span.active{
+section form .log-b-middle p span.active{
 	display: block;
 	width: 288px;
 	margin-left: 10px;
@@ -88,16 +88,17 @@ section form .log-b-middle p:nth-child(1) span.active{
 }
 section form .log-b-middle p:nth-child(1) input{
 	width: 288px;
-	height: 42px;
+	height: 30px;
 	border:1px solid #ddd;
 	padding-left: 10px;
 }
 section form .log-b-middle p:nth-child(2){
-	margin-top: 20px;
+	margin-top: 10px;
+	font-size: 12px;
 }
 section form .log-b-middle p:nth-child(2) input:nth-child(1){
 	width: 188px;
-	height: 42px;
+	height: 30px;
 	border:1px solid #ddd;
 	padding-left: 10px;
 }
@@ -106,8 +107,8 @@ section form .log-b-middle p i{
 	outline: none;
 	border: none;
 	width: 93px;
-	height: 44px;
-	line-height: 44px;
+	height: 32px;
+	line-height: 32px;
 	background: #b1b1b1;
 	text-align: center;
 	color: #fff;

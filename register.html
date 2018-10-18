@@ -23,15 +23,28 @@
            				<h2>注册万表会员</h2>
            			</div>
                     <div class="reg-b-middle">
-                    	<p><input type="text" placeholder="请输入手机号码" /></p>
                     	<p>
-                    		<input type="text" placeholder="短信验证码" />
-                    		<input type="text" value="获取验证码"/>
+                    		<input id="phone" type="text" placeholder="请输入手机号码" />
+                    		<span id="yphone" class="active">请输入正确的手机号码</span>
                     	</p>
-                    	<p><input type="text" placeholder="请设置密码" /></p>
-                    	<p><input type="text" placeholder="请再次输入密码" /></p>
-                    	<p><input type="text" placeholder="如有推荐人，请填写推荐人手机号" /></p>
-                    	<p><button>立即注册</button></p>
+                    	<p>
+                    		<input id="txt" type="text" placeholder="短信验证码" />
+                    		<i id="btny">获取验证码</i>
+                    		<span id="ybtn" class="active">请输入正确的手机号码</span>
+                    	</p>
+                    	<p>
+                    		<input id="pwd" type="text" placeholder="请设置密码" />
+                    		<span id="ypwd" class="active">请输入正确的密码</span>
+                    	</p>
+                    	<p>
+                    		<input id="cpwd" type="text" placeholder="请再次输入密码" />
+                    		<span id="ycpwd" class="active">两次输入的密码不一致</span>
+                    	</p>
+                    	<p>
+                    		<input id="rphone" type="text" placeholder="如有推荐人，请填写推荐人手机号" />
+                    		<span id="yrphone" class="active">请输入正确的手机号码</span>
+                    	</p>
+                    	<p><button id="btn" type="button">立即注册</button></p>
                     </div>
                     <div class="reg-b-bottom">
                     	<p>点击"立即注册"，即表示您同意并愿意遵守<span>万表网用户协议</span></p>
@@ -45,5 +58,107 @@
         <p> 广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</p>
         <p> Copyright 2008-2017 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
     </footer>
+    <script>
+    	var oBtn = document.getElementById("btn");
+    	oBtn.onclick=function(){
+    		//验证手机号；
+    		function checkPhone(){ 
+	    		var oPhone = document.getElementById("phone");
+	    		var oSpan = document.getElementById("yphone");
+			  	var pattern = /^1[34578]\d{9}$/; //验证手机号正则表达式 
+			  	if(pattern.test(oPhone.value)){
+			     	oSpan.style.display = "none";
+			    	oSpan.className="";
+			     	return true; 
+			    	
+			    } 
+			   	else{
+			    	oSpan.style.display = "block";
+			    	oSpan.className="active"
+			    	return false; 
+			    } 
+			} 
+	    	checkPhone();
+	    	
+	    	//验证码；
+	    	
+	    	
+	    	//验证密码；
+    		function checkPassword(){ 
+	    		var oPwd = document.getElementById("pwd");
+	    		var oYpwd = document.getElementById("ypwd");
+			  	var pattern = /^\w{4,8}$/; //验证密码正则表达式 
+			  	if(pattern.test(oPwd.value)){
+			     	oYpwd.style.display = "none";
+			    	oYpwd.className="";
+			     	return true; 
+			    	
+			    } 
+			   	else{
+			    	oYpwd.style.display = "block";
+			    	oYpwd.className="active"
+			    	return false; 
+			    } 
+			} 
+	    	checkPassword();
+	    	//确认密码；
+    		function confirmPassword(){ 
+    			var oPwd = document.getElementById("pwd");
+	    		var oCpwd = document.getElementById("cpwd");
+	    		var oYcpwd = document.getElementById("ycpwd");
+			  	if(oPwd.value === oCpwd.value){
+			     	oYcpwd.style.display = "none";
+			    	oYcpwd.className="";
+			     	return true; 
+			    } 
+			   	else{
+			    	oYcpwd.style.display = "block";
+			    	oYcpwd.className="active"
+			    	return false; 
+			    } 
+			} 
+	    	confirmPassword();
+	    	
+	    	//验证推荐人手机号；
+			function rCheckPhone(){ 
+	    		var oRphone = document.getElementById("rphone");
+	    		var oYrphone = document.getElementById("yrphone");
+			  	var pattern = /^1[34578]\d{9}$/; //验证手机号正则表达式 
+			  	if(pattern.test(oRphone.value)){
+			     	oYrphone.style.display = "none";
+			    	oYrphone.className="";
+			     	return true; 
+			    	
+			    } 
+			   	else{
+			    	oYrphone.style.display = "block";
+			    	oYrphone.className="active"
+			    	return false; 
+			    } 
+			} 
+	    	rCheckPhone();
+	    	
+    	}
+    	
+    	
+    	
+    	//获取验证码；
+    	var oBtny = document.getElementById("btny");
+    	btny.onclick=function(){
+			txt.value=showCode();
+		}
+		function showCode(){
+			var str="";
+			for(var i = 0;i<4;i++){
+			 	// 0 ~ sLetter.length - 1;
+				var sLetter="abcdefghigklmnopqrstuv_wxyz1234567890ABCDEFGHIGKLMNOPQRSTUVWXYZ";
+				var randomLetter = sLetter[Math.round(Math.random()*(sLetter.length-1))];
+				str=str+randomLetter;
+			}
+			return str;
+		}
+		
+		
+    </script>
 </body>
 </html>
