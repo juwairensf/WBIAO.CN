@@ -77,7 +77,6 @@ section form .reg-b-middle p input{
 	height: 30px;
 	border:1px solid #ddd;
 	padding-left: 10px;
-	color: #ccc;
 }
 section form .reg-b-middle p:nth-child(2){
 }
@@ -86,7 +85,6 @@ section form .reg-b-middle p:nth-child(2) input:nth-child(1){
 	height: 30px;
 	border:1px solid #ddd;
 	padding-left: 10px;
-	color: #cccccc;
 }
 section form .reg-b-middle p:nth-child(2) i{
 	display: inline-block;

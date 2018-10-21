@@ -49,13 +49,14 @@
         <p>万表网名表商城 版权所有 2008-2017 ICP备案证书号:粤ICP备09108738号 网监备案:4401060103141</p>
         <p> 广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</p>
         <p> Copyright 2008-2017 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
-    </footer>
+	</footer>
+	<script type="text/javascript" src="php/ajax.js" ></script>
     <script>
     	var oBtn = document.getElementById("btn");
     	oBtn.onclick=function(){
-    		//验证手机号；
+			//验证手机号；
+			var oPhone = document.getElementById("phone");
     		function checkPhone(){ 
-	    		var oPhone = document.getElementById("phone");
 	    		var oSpan = document.getElementById("yphone");
 			  	var pattern = /^1[34578]\d{9}$/; //验证手机号正则表达式 ;
 			  	if(pattern.test(oPhone.value)){
@@ -72,21 +73,30 @@
 			} 
 	    	checkPhone();
 	    	
-	    	//验证码；
-//	    	function verification(){
-//	    		var oTxt = document.getElementById("txt");
-//	    		var oYbtn = document.getElementById("ybtn");
-//	    		var vfc = /^\s{4}$/;
-//	    		if(vfc.test(oTxt.value)){
-//	    			oYbtn.style.display = "none";
-//	    			oYbtn.className = ""
-//	    			return true;
-//	    		}else{
-//	    			oYbtn.style.display = "block";
-//	    			oYbtn.className = "active";
-//	    			return false;
-//	    		}
-//	    	}
+           
+	    	
+			//验证码；
+			var oTxt = document.getElementById("txt");
+	    	function verification(){
+	    		
+	    		var oYbtn = document.getElementById("ybtn");
+	    		var vfc = /^\s{4}$/;
+	    		if(vfc.test(oTxt.value)){
+	    			oYbtn.style.display = "none";
+	    			oYbtn.className = ""
+	    			return true;
+	    		}else{
+	    			oYbtn.style.display = "block";
+	    			oYbtn.className = "active";
+	    			return false;
+	    		}
+			}
+			
+			var url = "http://localhost/WBIAO.CN/php/login.php";
+            ajaxPost(url,`phone=${oPhone.value}&txt=${oTxt.value}`)
+            .then(function(res){
+                console.log(res);
+            })
 	    	
     	}
     	//获取验证码；

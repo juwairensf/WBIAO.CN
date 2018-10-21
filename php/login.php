@@ -1,10 +1,11 @@
 <?php
+    header("Access-Control-Allow-Origin: *");
     header("Content-Type:text/html;charset=utf-8");
     #1、从前端拿来数据
 
-    $tel = @$_POST["tel"];
-    $pwd = @$_POST["pwd"];
-    if($tel == "" || $pwd == ""){
+    $phone = @$_POST["phone"];
+    $txt = @$_POST["txt"];
+    if($phone == "" || $txt == ""){
         die("参数不全");
     }
     #2、把数据放入到数据库之中
@@ -31,10 +32,10 @@
     // select 要查找的字段名 from 表名 where 条件;
      //解决数据库中文乱码问题
      mysql_query('SET NAMES UTF8');
-    $result=mysql_query("SELECT username,password FROM detaillist WHERE username='$username'");
+    $result=mysql_query("SELECT phone,txt FROM detaillist WHERE phone='$phone'");
     // echo $result;
     //注册加密用MD5 登陆也是md5
-    $password=md5($password);
+    $password=md5($txt);
     while($row=mysql_fetch_array($result)){
         // echo json_encode($row)."<br>";
         // echo json_encode($row);
@@ -45,5 +46,5 @@
         }
     }
     echo mysql_error();
-    echo "账号和密码不正确";
+    echo "登录失败";
 ?>

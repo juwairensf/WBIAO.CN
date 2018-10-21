@@ -1,13 +1,13 @@
 <?php
+    header("Access-Control-Allow-Origin: *");
     header("Content-Type:text/html;charset=utf-8;");
     #1. 从前端拿来数据;
-    $username = @$_POST["username"];
-    $password = @$_POST["password"];
-    $email = @$_POST["email"];
-    $QQ = @$_POST["QQ"];
     $phone = @$_POST["phone"];
-    $person = @$_POST["person"];
-    if($username == "" || $password == ""){
+    $txt = @$_POST["txt"];
+    $pwd = @$_POST["pwd"];
+    $cpwd = @$_POST["cpwd"];
+    $rphone = @$_POST["rphone"];
+    if($phone == "" || $pwd == ""){
         die("参数不全");
     }
     #2. 把数据放入到数据库之中;
@@ -23,8 +23,8 @@
     // $result = mysql_query("SELECT * FROM detaillist");
     $result = mysql_query(                                    //mysql_query() 仅对 SELECT，SHOW，EXPLAIN 或 DESCRIBE 语句返回一个资源标识符，如果查询执行不正确则返回 FALSE。
                                                               //对于其它类型的 SQL 语句，mysql_query() 在执行成功时返回 TRUE，出错时返回 FALSE。
-                "SELECT username FROM                                           
-                detaillist WHERE username='$username'"          
+                "SELECT phone FROM                                           
+                wanbiao WHERE phone='$phone'"          
     );
     // echo $result;                                           // resource资源数据表示未解析的数据
     $count = 0;
@@ -38,8 +38,8 @@
     }
     // 加密密码;
     $password = md5($password);
-    mysql_query("INSERT INTO detaillist (password, username,email,QQ,phone,person)     
-    VALUES ('$password', '$username','$email','$QQ','$phone','$person')");      // 向数据库里写入东西
+    mysql_query("INSERT INTO wanbiao (phone, txt,pwd,cpwd,rphone)     
+    VALUES ('$phone', '$txt','$pwd','$cpwd','$rphone')");      // 向数据库里写入东西
     if(mysql_error()){                         //如果有错误，就输出数据库错误和错误信息
         die("数据库错误".mysql_error());
     }
