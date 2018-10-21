@@ -4,8 +4,9 @@ body{
     margin: 0 auto;
 }
 header{
-   height: ;
+   height:100%;
 }
+
 header .header-top{
 	width: 100%;
 	background: #ad2527;
@@ -350,7 +351,14 @@ header .banner ul li img{
 	border-bottom: 3px solid #ddd;
 }
 #content .con5 .con5-cm .box span{
-	margin: 8px;
+	margin: 6px;
+	font-size: 14px;
+	width: 264px;overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+#content .con5 .con5-cm .box em{
+	margin: 6px;
 	font-size: 14px;
 	width: 264px;
 	overflow: hidden;
@@ -359,15 +367,10 @@ header .banner ul li img{
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 }
-#content .con5 .con5-cm .box em{
-	margin: 8px;
+#content .con5 .con5-cm .box i{
 	font-size: 14px;
-	width: 264px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
+	color: red;
+	margin-left: 8px;
 }
 
 /*内容6*/

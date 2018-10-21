@@ -37,8 +37,9 @@ $.extend(WaterFall.prototype,{
 			html+=`
 					<div class="box" style="height:${height}px">
 						<img src="${json[i].image}" alt=""/>
-						<span>${json[i].title}</span>
+						<span>&yen;1,930</span>
 						<em>法国总统夫人之选 法国优雅时尚腕表品牌：Michel Herbelin赫柏林-Classiques经典系列 12443/P08GO </em>
+						<i>加入购物车</i>
 					</div>
 				  `
 		}
