@@ -32,14 +32,13 @@
     // select 要查找的字段名 from 表名 where 条件;
      //解决数据库中文乱码问题
      mysql_query('SET NAMES UTF8');
-    $result=mysql_query("SELECT phone,txt FROM detaillist WHERE phone='$phone'");
+    $result=mysql_query("SELECT phone,txt FROM wanbiao WHERE phone='$phone'");
     // echo $result;
-    //注册加密用MD5 登陆也是md5
-    $password=md5($txt);
+    $phone = md5($phone);
     while($row=mysql_fetch_array($result)){
         // echo json_encode($row)."<br>";
         // echo json_encode($row);
-        if($row['password']===$password){
+        if($row['phone']===$phone){
             die ("登录成功");
         }else{
             die("登陆失败");

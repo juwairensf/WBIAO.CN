@@ -72,7 +72,6 @@
 			     	oSpan.style.display = "none";
 			    	oSpan.className="";
 			     	return true; 
-			    	
 			    } 
 			   	else{
 			    	oSpan.style.display = "block";
@@ -158,11 +157,11 @@
 			rCheckPhone();
 			
 			var url = "http://localhost/WBIAO.CN/php/register.php";
-                    ajaxPost(url,`phone=${oPhone.value}&txt=${oTxt.value}&pwd=${oPwd.value}&cpwd=${oCpwd.value}&rphone=${oRphone.value}`)
-                    .then(function(res){
-                        console.log(res);
-                    })
-	    	
+			ajaxPost(url,`phone=${oPhone.value}&txt=${oTxt.value}&pwd=${oPwd.value}&cpwd=${oCpwd.value}&rphone=${oRphone.value}`)
+			.then(function(res){
+				console.log(res);
+			})
+	
     	}
     	
     	
