@@ -537,6 +537,11 @@ header .logo .logo-right{
     margin: 0;
     padding: 0;
 }
+.code-box .code_img img{
+    display: block;
+    width: 82px;
+    height: 82px;
+}
 .code_font {
     float: right;
     width: 82px;
